@@ -1,0 +1,85 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/login.css'%}">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>giris yap</title>
+</head>
+<body>
+    <form action="">{% csrf_token %}
+  <section id="logincard">
+    <div class="card login row">
+      <div class="col-12 text-center"><img class="logo-bsr" src="{% static 'img/bsr-logo.png'%}" alt=""></div>
+
+      <div class="col-12 text-center">
+        <div class="input-label border mx-auto">
+          <img class="input-svg" src="{% static 'img/person.png'%}" alt="">
+          <input class="" name="login" id="id_login" type="text" placeholder="Kullanıcı adı veya e-posta" required>
+        </div>
+    </div>
+      <div class="col-12 text-center">
+        <div class="input-label border mx-auto" style="margin-top: 24px;">
+          <img class="input-svg" src="{% static 'img/passwd.png'%}" alt="">
+          <input class="" id="id_password" name="password" type="password" placeholder="Şifre" required>
+        </div>
+    </div>
+      <div class="col-12 text-start">
+        <div class="input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
+            <a class="forgot-pswd" href="accounts/password/reset/">Şifremi Unuttum</a>
+        </div>
+    </div>
+      <div class="col-12 text-center">
+        <div class="input-label mx-auto" style="margin-top: 20px;">
+          <button type="submit" class="login-button" >Giriş Yap</button>
+        </div>
+        
+    </div>
+      <div class="col-12 text-center">
+        <h2 class="line mx-auto text-center">
+          <span class="outer-text">veya</span>
+        </h2>
+    </div>
+    <div class="col-12 text-center">
+      <div  onclick="location.href='{% provider_login_url 'google' %}'" class="input-label border mx-auto text-center" style="margin-top: 15px; cursor: pointer;">
+          <img class="google-logo" src="{% static 'img/google.png'%}" alt="">
+          <p class="google-text">Google ile giriş yap</p>
+      </div>
+       </div>
+
+       <div class="col-12 text-center">
+        <div class="input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
+           <p class="forgot-pswd">Hesabın yok mu? <a class="forgot-pswd" href="register">Kayıt Ol</a></p> 
+        </div>
+    </div>
+      
+    </div>
+</section>
+    </form>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!--
+{% load socialaccount %}
+<html>
+<body>
+<h1>My Google OAuth Project </h1>
+{% if user.is_authenticated %}
+  <p>Welcome, You are logged in as {{ user.username }}</p>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">asdasdas</a>
+{% endif %}
+</body>
+</html>
+-->
