@@ -25,7 +25,8 @@ urlpatterns = [
     #...
     path('admin/', admin.site.urls),
     path("" , include("accounts.urls")),
-    path('accounts/login', TemplateView.as_view(template_name="login.html")),
+    path("" , include("home.urls")),
+    path("" , include("forum.urls")),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view()),
 ]

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
 def test(request):
-    return render(request , 'password_reset.html')
+    return render(request , 'asdas.html')
 # Create your views here.
 

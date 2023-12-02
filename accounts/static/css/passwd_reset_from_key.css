@@ -1,0 +1,12 @@
+html, body { 
+    background-color: gray;
+}
+
+.bsr-card {
+    width: 400px;
+    height: 395px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+}

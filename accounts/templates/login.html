@@ -11,30 +11,30 @@
   <title>giris yap</title>
 </head>
 <body>
-    <form action="">{% csrf_token %}
+    <form action="" method="post">{% csrf_token %}
   <section id="logincard">
     <div class="card login row">
       <div class="col-12 text-center"><img class="logo-bsr" src="{% static 'img/bsr-logo.png'%}" alt=""></div>
 
       <div class="col-12 text-center">
-        <div class="input-label border mx-auto">
-          <img class="input-svg" src="{% static 'img/person.png'%}" alt="">
+        <div class="form-input-label border mx-auto">
+          <img class="form-input-svg" src="{% static 'img/person.png'%}" alt="">
           <input class="" name="login" id="id_login" type="text" placeholder="Kullanıcı adı veya e-posta" required>
         </div>
     </div>
       <div class="col-12 text-center">
-        <div class="input-label border mx-auto" style="margin-top: 24px;">
-          <img class="input-svg" src="{% static 'img/passwd.png'%}" alt="">
+        <div class="form-input-label border mx-auto" style="margin-top: 24px;">
+          <img class="form-input-svg" src="{% static 'img/passwd.png'%}" alt="">
           <input class="" id="id_password" name="password" type="password" placeholder="Şifre" required>
         </div>
     </div>
       <div class="col-12 text-start">
-        <div class="input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
-            <a class="forgot-pswd" href="accounts/password/reset/">Şifremi Unuttum</a>
+        <div class="form-input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
+            <a class="forgot-pswd" href="/accounts/password/reset/">Şifremi Unuttum</a>
         </div>
     </div>
       <div class="col-12 text-center">
-        <div class="input-label mx-auto" style="margin-top: 20px;">
+        <div class="form-input-label mx-auto" style="margin-top: 20px;">
           <button type="submit" class="login-button" >Giriş Yap</button>
         </div>
         
@@ -45,15 +45,15 @@
         </h2>
     </div>
     <div class="col-12 text-center">
-      <div  onclick="location.href='{% provider_login_url 'google' %}'" class="input-label border mx-auto text-center" style="margin-top: 15px; cursor: pointer;">
+      <div  onclick="location.href='{% provider_login_url 'google' %}'" class="form-input-label border mx-auto text-center" style="margin-top: 15px; cursor: pointer;">
           <img class="google-logo" src="{% static 'img/google.png'%}" alt="">
           <p class="google-text">Google ile giriş yap</p>
       </div>
        </div>
 
        <div class="col-12 text-center">
-        <div class="input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
-           <p class="forgot-pswd">Hesabın yok mu? <a class="forgot-pswd" href="register">Kayıt Ol</a></p> 
+        <div class="form-input-label mx-auto" style="margin-top: 15px; height: fit-content!important;">
+           <p class="forgot-pswd">Hesabın yok mu? <a class="forgot-pswd" href="/accounts/signup">Kayıt Ol</a></p> 
         </div>
     </div>
       
